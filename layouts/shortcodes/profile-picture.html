@@ -1,0 +1,4 @@
+<div class="profile-picture">
+  {{ $img := resources.Get "img/me.jpg" | resources.Fingerprint }}
+  <img src="{{ $img.Permalink }}" alt="Alberto Restifo's profile picture">
+</div>

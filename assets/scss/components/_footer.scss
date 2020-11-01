@@ -1,0 +1,23 @@
+footer {
+  margin: 4em 0;
+  font-size: 0.8em;
+  color: $secondary-text-color;
+  border-top: 1px solid $separator-color;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0.25em 0;
+
+    li {
+      &:not(:last-child)::after {
+        content: "|";
+        display: inline-block;
+        padding: 0 0.5em;
+      }
+    }
+  }
+}

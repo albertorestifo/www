@@ -1,0 +1,63 @@
+// @format
+
+.ingredients {
+  margin-bottom: 2em;
+
+  td {
+    line-height: 1.2em;
+    padding: 0.75em 1em;
+
+    @include breakpoint(sm) {
+      padding: 0.5em 1em;
+    }
+  }
+
+  tr:not(:first-child) td {
+    border-top: 1px solid $separator-color;
+  }
+
+  td:first-child {
+    font-weight: bold;
+    text-align: right;
+    word-break: normal;
+    vertical-align: top;
+  }
+
+  .ingredient-name {
+    margin-right: 0.5em;
+  }
+
+  .ingredient-comment {
+    font-size: 0.8em;
+    color: $secondary-text-color;
+    display: inline-block;
+  }
+}
+
+.gallery {
+  display: grid;
+  margin: 2em 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  a {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .step span {
+    font-size: 0.8em;
+    display: block;
+    color: $secondary-text-color;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0.2em 0;
+  }
+}

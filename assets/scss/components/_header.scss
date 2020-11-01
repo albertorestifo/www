@@ -1,0 +1,41 @@
+header {
+  padding: 0.5em 0.5em;
+  border-bottom: 1px solid $separator-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint(sm) {
+    padding: 1.5em 1em 0.5em 1em;
+  }
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+
+  a, a:visited, a:hover {
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  span {
+    display: none;
+
+    @include breakpoint(xs) {
+      display: inline-block;
+    }
+  }
+}
+
+header nav a {
+  margin-right: 1em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:visited {
+    color: $link-color;
+  }
+}

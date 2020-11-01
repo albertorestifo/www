@@ -1,0 +1,15 @@
+.profile-picture {
+  width: 150px;
+  border-radius: 9999px;
+  float: right;
+  overflow: hidden;
+
+  @include breakpoint(sm) {
+    width: 250px;
+    margin: 1em;
+  }
+
+  img {
+    width: 100%;
+  }
+}

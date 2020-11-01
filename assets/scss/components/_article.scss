@@ -1,0 +1,18 @@
+// @format
+
+article {
+  h1:first-child {
+    margin-top: 1em;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+}
+
+.cover-image {
+  width: 100%;
+}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<article>
+  <div class="profile-picture">
+    {{ $img := resources.Get "img/me.jpg" | resources.Fingerprint }}
+    <img src="{{ $img.Permalink }}" alt="Alberto Restifo's profile picture">
+  </div>
+
+  <h1>Hi,</h1>
+
+  {{ .Content }}
+</article> 
+{{ end }}

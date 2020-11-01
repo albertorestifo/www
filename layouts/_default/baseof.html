@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+  {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+  <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="/">
+        A<span>lberto</span> R<span>estifo</span>
+      </a>
+    </div>
+
+    <nav>
+      <a href='{{ ref . "bread" }}'>Bread</a>
+    </nav>
+  </header>
+
+  {{ block "main" . }} {{ end }}
+
+  <footer>
+    <ul>
+      <li><a href='{{ ref . "about" }}'>About Me</a></li>
+      <li><a href='{{ ref . "license" }}'>License</a></li>
+      <li><a href='{{ ref . "privacy" }}'>Privacy Policy</a></li>
+      <li><a href="https://git.sr.ht/~arestifo/www">Source Code</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
