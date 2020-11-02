@@ -4,11 +4,23 @@
 <article>
   <h1>{{ .Title }}</h1>
 
-  <ul>
-    {{ range $ingredient := .Params.ingredients }}
-      <li>{{ $ingredient.name }} ({{ $ingredient.quantity }}g)</li>
-    {{ end }}
-  </ul>
+  <h2>Ingredients</h2>
+
+  <table class="ingredients">
+    <tbody>
+      {{ range $ingredient := .Params.ingredients }}
+      <tr>
+        <td>{{ $ingredient.quantity }}g</td>
+        <td>
+          <span class="ingredient-name">{{ $ingredient.name }}</span>
+          {{ with $ingredient.comment }}
+            <span class="ingredient-comment">{{ $ingredient.comment }}</span>
+          {{ end }}
+        </td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
 
   {{ .Content }}
 </article> 
