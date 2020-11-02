@@ -24,7 +24,7 @@ ingredients:
     comment: Alternatively use 80g of milk
   - name: Bread Improver
     quantity: 20
-serving_size: 500
+serving: 500
 
 gallery:
   - path: images/bread/toast_loaf/01.jpg

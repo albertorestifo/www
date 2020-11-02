@@ -17,6 +17,7 @@ ingredients:
     quantity: 20
   - name: Bread Improver
     quantity: 15
+serving: 450
 ---
 
 ## Overview

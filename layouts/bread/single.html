@@ -22,6 +22,11 @@
     </tbody>
   </table>
 
+  <script>
+    window.ingredients = JSON.parse({{ .Params.ingredients | jsonify }});
+    window.serving = {{ .Params.serving | safeJS }};
+  </script>
+
   {{ .Content }}
 </article> 
 {{ end }}
